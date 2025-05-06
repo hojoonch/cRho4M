@@ -1,0 +1,31 @@
+Forward test on circular model
+
+    0    3   3.0    0    0
+
+    1  << scale
+
+   0 << num_regions
+resistivity.dat
+
+    0  << num_poly
+  
+  
+  16  << num_electrodes
+ 1      1
+ 2      5
+ 3      9
+ 4      13
+ 5      17
+ 6      21
+ 7      25
+ 8      29
+ 9      33
+ 10     37
+ 11     41
+ 12     45
+ 13     49
+ 14     53
+ 15     57
+ 16     61
+
+
