@@ -1,0 +1,12 @@
+The matlab function create_mesh.m creates a simple triangular unstructured mesh based on a .csv file for a survey that uses only surface electrodes.
+The .csv file should contain in the first column the x-coordinate of every electrode (starting with electrode 1) and the y-coordinate of that electrode. This function only works if the electrodes are positioned in a sequential line (i.e. EC1 is x1, EC2 is x2, EC3 is x3,... and x1<x2<x3<... or x1>x2>x3>...)
+If more complicated topographies are used (more topographical data than only for the electrodes), this function is not suited. For now, this function only provides the functionality of having 1 zone over the complete profile.
+
+Next to the .csv file, the function will ask the gridsize near the surface for the grid on which the inversion will be carried out. A second and third parameter are the grid size near the bottom of the sensitive zone and the depth of the sensitive zone. This depth is not the actual zone of sensitivity, but the depth to which the inversion will construct a grid that the inversion will focus on. Below this depth, the gridsize will increase quite rapidly towards the borders of the grid (in theory infinity, in reality, set to 200 m).
+The reason for the possibility for a larger gridsize near the bottom is the fact that there probably be a reduced senstivity deeper below the surface. A very detailed grid in that region will take space on your computer, but might not lead to much more meaningful results than a coarser grid.
+The depth of the mesh creates a border on both sides of the grid area that goes z meters down below the surface. If the topography is very steep or challenging, you might want to increase this value.
+The output of the code is the .geo (input for gmsh),.dat file (input for R2) and the .msh file (output of gmsh), saved in the same folder. As a check, you can load the .msh file in gmsh and visually confirm whether it satisfies your needs.
+
+To being able to run this code, you need next to a matlab license, a gmsh.exe file. (should be in located in the gmsh software folder)
+
+For questions, please contact nielsclaes@gmail.com
