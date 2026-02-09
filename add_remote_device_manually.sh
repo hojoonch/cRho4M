@@ -1,6 +1,6 @@
 #!/bin./bash
 
-read -p  " 추가할 리모트 디바이스의 시스템 ID는? " remoteName
+read -p  " 추가할 리모트 디바이스의 시스템 ID는? " folder_name
 
 # 입력값이 비어있는지 확인
 if [ -z "$folder_name" ]; then
