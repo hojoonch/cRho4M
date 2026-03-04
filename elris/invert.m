@@ -38,11 +38,10 @@ function invert()%(varargin)
         end
         % new codes for json
 
-        octave_ver = version();
-        if str2num(octave_ver(1)) >= 7
-          %load pkg statistics; % for knnsearch
+        octave_ver = cellfun(@str2double, strsplit(version(),"."));
+
+        if octave_ver(1) >= 7
         else
-          % load user install octave package
           pkg load json;
         end
 
