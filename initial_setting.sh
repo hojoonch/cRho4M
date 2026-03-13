@@ -2,7 +2,7 @@
 
 PROGRAM="mono ./bin/cRho.exe"
 DIR1="./JSON"
-DIR2="./local"
+DIR2="./GroupA/local"
 
 #run
 $PROGRAM &
