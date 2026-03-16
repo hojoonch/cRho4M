@@ -48,7 +48,7 @@ function invert()%(varargin)
         fname = [datapath filesep filename];
         data = getResisitivityData(fname);
 
-				itmax = 20;
+				itmax = 8;
 
         %if itmax==11
         %    itmax=15;
